@@ -14,16 +14,13 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('home/home');
-})->name('home');
+Route::view('/', 'home.home');
 
 //Rota: Searching Lista de Produtos
-Route::post('user/add', 'UsuarioController@addUser')->name('user.add');
+//Route::post('user/add', 'UsuarioController@addUser')->name('user.add');
 
 //Rota: Searching Lista de Produtos
-Route::post('login', 'UsuarioController@index')->name('uuser.form.login');
-
+//Route::post('login', 'UsuarioController@index')->name('uuser.form.login');
 
 Auth::routes();
 
